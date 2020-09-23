@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="styles/style.css">
+    <style>
+        
+
+.header {
+    grid-area: header;
+    background: palegreen;
+}
+.nav{
+    grid-area: nav;
+    background: peachpuff;
+}
+.zone1 {
+    grid-area: zone1;
+    background: sandybrown;
+}
+.zone2 {
+    grid-area: zone2;
+    background: orchid;
+}
+.ad {
+    grid-area: ad;
+    background: lightskyblue;
+}
+.footer {
+    grid-area: footer;
+    background: pink;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 100px 1fr 2fr auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header header header"
+    "nav zone1 zone2 ad"
+    "nav footer footer footer";
+    min-height: 100vh;
+    min-width: 100vw;
+    margin: 0px;
+}   
+
+@media screen and (max-width: 680px ) {
+    body { display: grid;
+        grid-template-columns: 100px 1fr 2fr auto;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "header header header"
+        "zone1 zone1 ad"
+        "zone2 zone2 zone2"
+        "footer footer footer";
+    }
+.nav{
+    display: none;
+}
+}
+    </style>
+</head>
+<body>
+    <div class="header">
+        header
+    </div>
+    <div class="zone1">
+        zone 1
+    </div>
+    <div class="nav">
+        nav
+    </div>
+    <div class="zone2">
+        zone 2
+    </div>
+    <div class="ad">
+        ad
+    </div>
+    <div class="footer">
+        footer
+    </div>
+
+</body>
+</html>
